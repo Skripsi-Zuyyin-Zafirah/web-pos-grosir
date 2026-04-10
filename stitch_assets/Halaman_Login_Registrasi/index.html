@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Login | Toko Jasa Grosir</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error": "#ba1a1a",
+                        "on-surface-variant": "#414754",
+                        "on-tertiary-fixed": "#002204",
+                        "on-primary-fixed": "#001a41",
+                        "primary": "#005bbf",
+                        "primary-fixed": "#d8e2ff",
+                        "on-secondary-container": "#11278e",
+                        "inverse-primary": "#adc7ff",
+                        "surface-container-highest": "#dfe3e8",
+                        "surface": "#f7f9ff",
+                        "on-tertiary-container": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "secondary-container": "#8596ff",
+                        "tertiary-fixed": "#98f994",
+                        "on-secondary-fixed-variant": "#293ca0",
+                        "on-secondary-fixed": "#00105c",
+                        "tertiary-container": "#298832",
+                        "secondary": "#4355b9",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#f1f4fa",
+                        "on-tertiary-fixed-variant": "#005313",
+                        "surface-dim": "#d7dae0",
+                        "primary-container": "#1a73e8",
+                        "surface-variant": "#dfe3e8",
+                        "inverse-on-surface": "#eef1f7",
+                        "on-error-container": "#93000a",
+                        "on-surface": "#181c20",
+                        "outline-variant": "#c1c6d6",
+                        "surface-tint": "#005bc0",
+                        "tertiary": "#006e1c",
+                        "primary-fixed-dim": "#adc7ff",
+                        "on-primary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#e5e8ee",
+                        "surface-container": "#ebeef4",
+                        "inverse-surface": "#2d3135",
+                        "secondary-fixed-dim": "#bac3ff",
+                        "on-primary-container": "#ffffff",
+                        "on-background": "#181c20",
+                        "on-primary-fixed-variant": "#004493",
+                        "background": "#f7f9ff",
+                        "outline": "#727785",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#dee0ff",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#7ddc7a",
+                        "surface-bright": "#f7f9ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+        }
+        .bg-pattern {
+            background-image: radial-gradient(#005bbf 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+            opacity: 0.05;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex items-center justify-center p-6 relative overflow-hidden">
+<div class="absolute inset-0 bg-pattern pointer-events-none"></div>
+<div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-secondary-fixed opacity-20 blur-[120px]"></div>
+<div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-primary-fixed opacity-20 blur-[120px]"></div>
+<main class="w-full max-w-[1100px] grid md:grid-cols-2 bg-surface-container-lowest rounded-full overflow-hidden shadow-indigo relative z-10">
+<div class="hidden md:flex flex-col justify-between p-12 bg-primary text-on-primary relative overflow-hidden">
+<div class="relative z-10">
+<div class="flex items-center gap-3 mb-12">
+<div class="w-10 h-10 bg-on-primary rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="inventory_2">inventory_2</span>
+</div>
+<span class="text-2xl font-black tracking-tight font-headline">Toko Jasa</span>
+</div>
+<h1 class="text-4xl font-extrabold leading-tight mb-6 font-headline">
+                    Arsitektur Grosir Modern Untuk Efisiensi Tanpa Batas.
+                </h1>
+<p class="text-primary-fixed opacity-90 text-lg leading-relaxed max-w-md">
+                    Kelola ribuan SKU, antrean pesanan, dan transaksi point-of-sale dalam satu dashboard editorial yang presisi.
+                </p>
+</div>
+<div class="relative z-10 mt-auto">
+<div class="flex items-center gap-4 p-4 bg-on-primary/10 rounded-xl backdrop-blur-md">
+<div class="w-12 h-12 rounded-full overflow-hidden border-2 border-on-primary/20">
+<img class="w-full h-full object-cover" data-alt="professional business man smiling with confidence in a modern office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCM0Q0xMS4JP-edd68t5mj7DwuB8UtlPjZv9_Vl7cG1Rp0M3kmoQGAIC5q2kz3udVTez_W3ZYavZ3-XIm9Xfxlcl8ffaJ28kNP0z1nbMFNtR0LVGkdZ_kE6l_0mvM_ahEyihoQKWmgN6gt0iP1ZFba_9ciCLR4UUngPeQBabgpOcui2WYCvTmtNZh-nzpdE20TA2b2lc_HxS9iU5XDR3if6VvhaLYH7SeDpiu6LY_sTJ1MWONKhtrUqoB20ZtH2G3Zwtgylk1K_7IFb"/>
+</div>
+<div>
+<p class="text-sm font-bold">Budi Santoso</p>
+<p class="text-xs opacity-70">Mitra Grosir Platinum</p>
+</div>
+</div>
+</div>
+<div class="absolute bottom-0 right-0 w-64 h-64 bg-primary-container opacity-20 translate-x-1/2 translate-y-1/2 rounded-full blur-3xl"></div>
+</div>
+<div class="p-8 md:p-16 flex flex-col justify-center">
+<div class="mb-10">
+<h2 class="text-3xl font-bold text-on-surface mb-2 tracking-tight">Selamat Datang</h2>
+<p class="text-on-surface-variant text-sm tracking-tight">Silakan masuk untuk melanjutkan operasional Anda.</p>
+</div>
+<form class="space-y-6">
+<div class="space-y-2">
+<label class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant flex items-center gap-2">
+                        Pilih Akses
+                    </label>
+<div class="grid grid-cols-3 gap-2 p-1 bg-surface-container-high rounded-xl">
+<label class="cursor-pointer">
+<input checked="" class="hidden peer" name="role" type="radio" value="pembeli"/>
+<div class="text-center py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 peer-checked:bg-surface-container-lowest peer-checked:text-primary peer-checked:shadow-sm text-on-surface-variant hover:bg-surface-container-highest">
+                                Pembeli
+                            </div>
+</label>
+<label class="cursor-pointer">
+<input class="hidden peer" name="role" type="radio" value="kasir"/>
+<div class="text-center py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 peer-checked:bg-surface-container-lowest peer-checked:text-primary peer-checked:shadow-sm text-on-surface-variant hover:bg-surface-container-highest">
+                                Kasir
+                            </div>
+</label>
+<label class="cursor-pointer">
+<input class="hidden peer" name="role" type="radio" value="admin"/>
+<div class="text-center py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 peer-checked:bg-surface-container-lowest peer-checked:text-primary peer-checked:shadow-sm text-on-surface-variant hover:bg-surface-container-highest">
+                                Admin
+                            </div>
+</label>
+</div>
+</div>
+<div class="space-y-4">
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-on-surface-variant group-focus-within:text-primary transition-colors" data-icon="person">person</span>
+</div>
+<input class="w-full pl-12 pr-4 py-4 bg-surface-container-high border-none rounded-xl focus:ring-2 focus:ring-primary/20 text-on-surface placeholder:text-outline/60 text-sm transition-all" placeholder="Username atau Email" required="" type="text"/>
+</div>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-on-surface-variant group-focus-within:text-primary transition-colors" data-icon="lock">lock</span>
+</div>
+<input class="w-full pl-12 pr-12 py-4 bg-surface-container-high border-none rounded-xl focus:ring-2 focus:ring-primary/20 text-on-surface placeholder:text-outline/60 text-sm transition-all" placeholder="Kata Sandi" required="" type="password"/>
+<button class="absolute inset-y-0 right-0 pr-4 flex items-center text-on-surface-variant hover:text-primary" type="button">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+</button>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<label class="flex items-center gap-2 cursor-pointer">
+<input class="w-4 h-4 rounded text-primary border-outline focus:ring-primary/20" type="checkbox"/>
+<span class="text-xs font-medium text-on-surface-variant">Ingat saya</span>
+</label>
+<a class="text-xs font-bold text-primary hover:text-secondary-fixed-dim transition-colors" href="#">Lupa Sandi?</a>
+</div>
+<button class="w-full py-4 bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold rounded-xl shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-[0.98] transition-all duration-150" type="submit">
+                    Masuk Sekarang
+                </button>
+</form>
+<div class="mt-10 pt-10 border-t border-outline-variant/30 text-center">
+<p class="text-sm text-on-surface-variant mb-4">Belum memiliki akun grosir?</p>
+<a class="inline-flex items-center justify-center px-8 py-3 rounded-xl border border-primary text-primary font-bold text-sm hover:bg-primary/5 transition-all" href="#">
+                    Daftar Akun Pembeli
+                </a>
+</div>
+</div>
+</main>
+<footer class="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-6 text-[10px] uppercase tracking-[0.2em] font-bold text-outline">
+<a class="hover:text-primary transition-colors" href="#">Syarat &amp; Ketentuan</a>
+<span class="w-1 h-1 bg-outline/30 rounded-full"></span>
+<a class="hover:text-primary transition-colors" href="#">Kebijakan Privasi</a>
+<span class="w-1 h-1 bg-outline/30 rounded-full"></span>
+<span>© 2024 Toko Jasa Grosir</span>
+</footer>
+</body></html>

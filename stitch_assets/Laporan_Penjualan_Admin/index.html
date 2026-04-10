@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Toko Jasa Grosir - Laporan Penjualan</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary": "#ffffff",
+                    "on-primary-container": "#ffffff",
+                    "on-background": "#181c20",
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed": "#001a41",
+                    "on-tertiary-container": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-secondary-container": "#11278e",
+                    "on-secondary-fixed-variant": "#293ca0",
+                    "surface-container-low": "#f1f4fa",
+                    "surface": "#f7f9ff",
+                    "on-primary-fixed-variant": "#004493",
+                    "primary-container": "#1a73e8",
+                    "inverse-surface": "#2d3135",
+                    "tertiary-fixed-dim": "#7ddc7a",
+                    "secondary-fixed": "#dee0ff",
+                    "surface-container": "#ebeef4",
+                    "surface-container-high": "#e5e8ee",
+                    "secondary": "#4355b9",
+                    "outline-variant": "#c1c6d6",
+                    "surface-variant": "#dfe3e8",
+                    "on-surface-variant": "#414754",
+                    "on-tertiary-fixed": "#002204",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed": "#98f994",
+                    "tertiary-container": "#298832",
+                    "surface-container-highest": "#dfe3e8",
+                    "surface-bright": "#f7f9ff",
+                    "background": "#f7f9ff",
+                    "tertiary": "#006e1c",
+                    "primary-fixed": "#d8e2ff",
+                    "primary": "#005bbf",
+                    "surface-dim": "#d7dae0",
+                    "on-surface": "#181c20",
+                    "on-error-container": "#93000a",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed-dim": "#adc7ff",
+                    "error": "#ba1a1a",
+                    "secondary-container": "#8596ff",
+                    "inverse-primary": "#adc7ff",
+                    "surface-tint": "#005bc0",
+                    "secondary-fixed-dim": "#bac3ff",
+                    "on-secondary-fixed": "#00105c",
+                    "outline": "#727785",
+                    "inverse-on-surface": "#eef1f7",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#005313"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .tonal-nesting {
+        background-color: #f1f4fa;
+      }
+      .shadow-indigo {
+        box-shadow: 0 10px 40px -10px rgba(67, 85, 185, 0.08);
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      h1, h2, h3 {
+        font-family: 'Manrope', sans-serif;
+      }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-slate-200/50 flex justify-between items-center px-6 h-16 shadow-sm">
+<div class="flex items-center gap-8">
+<span class="text-xl font-bold tracking-tighter text-blue-800 dark:text-blue-300">Toko Jasa Grosir</span>
+<div class="hidden md:flex items-center space-x-6 h-full">
+<a class="text-slate-500 font-medium font-inter text-sm hover:text-blue-700" href="#">Ordering</a>
+<a class="text-slate-500 font-medium font-inter text-sm hover:text-blue-700" href="#">Distribution</a>
+<a class="text-blue-700 font-semibold font-inter text-sm border-b-2 border-blue-600 h-16 flex items-center" href="#">Reports</a>
+<a class="text-slate-500 font-medium font-inter text-sm hover:text-blue-700" href="#">Users</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-500 hover:bg-slate-50 rounded-full transition-colors active:scale-95 duration-150">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 text-slate-500 hover:bg-slate-50 rounded-full transition-colors active:scale-95 duration-150">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<img alt="Administrator Profile" class="w-8 h-8 rounded-full border border-slate-200" data-alt="professional headshot of a corporate administrator in a modern office setting with natural lighting and soft focus background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeLo40WS8n9v0-qzgEq1mIEGmWM5hLzNIt54Eaf8vAHJQ_HgSvqbqCA-uM8netjRgDmgxeaYGpj_bzwRJwYlPPMvsK2s0q5yVUfa7XjIoWXG0C2g1nzj1NEDXKZ3EUjLDyY_PovHvA39S0G50FaxTGYjbVKa3M2y6WdYINpc622B9TYqMmQX54HW9Meh9SJch0fl7qYwCoD3dHEqjJV-60b429t375parFe7w8YPRIMFnfq0cVf8ZDvZehuFUzbKBaWJo-0e6mos6P"/>
+</div>
+</header>
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full w-64 z-40 bg-slate-50 dark:bg-slate-950 flex flex-col p-4 pt-20 gap-2 border-r border-slate-200/50">
+<div class="px-4 py-6 mb-4">
+<h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest">Management</h3>
+<p class="text-xs text-slate-400 mt-1 font-mono">v2.4.0-Architect</p>
+</div>
+<nav class="flex-grow space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-200/50 rounded-lg transition-all duration-200 group" href="#">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+<span class="font-inter text-sm font-medium">Ordering</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-200/50 rounded-lg transition-all duration-200 group" href="#">
+<span class="material-symbols-outlined" data-icon="local_shipping">local_shipping</span>
+<span class="font-inter text-sm font-medium">Distribution</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-blue-50 text-blue-700 rounded-lg transition-all duration-200 group" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="font-inter text-sm font-semibold">Reports</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-200/50 rounded-lg transition-all duration-200 group" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-inter text-sm font-medium">Users</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-200/50 rounded-lg transition-all duration-200 group" href="#">
+<span class="material-symbols-outlined" data-icon="science">science</span>
+<span class="font-inter text-sm font-medium">Simulations</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-200/50 rounded-lg transition-all duration-200 group" href="#">
+<span class="material-symbols-outlined" data-icon="info">info</span>
+<span class="font-inter text-sm font-medium">About</span>
+</a>
+</nav>
+<div class="mt-auto border-t border-slate-200/50 pt-4 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-200/50 rounded-lg transition-all duration-200 group" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span class="font-inter text-sm font-medium">Support</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-error hover:bg-error-container/20 rounded-lg transition-all duration-200 group" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="font-inter text-sm font-medium">Logout</span>
+</a>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="ml-64 pt-16 min-h-screen">
+<div class="p-8 max-w-7xl mx-auto">
+<!-- Header & Filter Section -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-10">
+<div>
+<h1 class="text-3xl font-extrabold tracking-tight text-on-surface">Laporan Penjualan</h1>
+<p class="text-on-surface-variant mt-1 font-body">Analisis data performa bisnis secara real-time.</p>
+</div>
+<div class="flex flex-wrap items-center gap-4">
+<div class="bg-surface-container-high p-1 rounded-full flex">
+<button class="px-4 py-2 text-xs font-bold rounded-full bg-white shadow-sm text-primary">Daily</button>
+<button class="px-4 py-2 text-xs font-medium text-on-surface-variant hover:text-on-surface">Weekly</button>
+<button class="px-4 py-2 text-xs font-medium text-on-surface-variant hover:text-on-surface">Monthly</button>
+</div>
+<button class="flex items-center gap-2 px-5 py-2.5 bg-gradient-to-br from-primary to-primary-container text-white rounded-lg font-semibold text-sm shadow-indigo hover:opacity-90 active:scale-95 transition-all">
+<span class="material-symbols-outlined !text-lg" data-icon="download">download</span>
+                        Export CSV
+                    </button>
+</div>
+</div>
+<!-- Bento Grid Stats -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+<!-- Total Orders Card -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-indigo border border-transparent hover:border-outline-variant/15 transition-all">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-blue-50 rounded-lg">
+<span class="material-symbols-outlined text-primary" data-icon="shopping_basket">shopping_basket</span>
+</div>
+<span class="text-tertiary text-xs font-bold bg-tertiary/10 px-2 py-1 rounded">+12.5%</span>
+</div>
+<h3 class="text-on-surface-variant text-sm font-medium tracking-tight">Total Orders</h3>
+<p class="text-3xl font-extrabold text-on-surface mt-1">1,284</p>
+<p class="text-xs text-slate-400 mt-2">vs 1,142 bulan lalu</p>
+</div>
+<!-- Gross Revenue Card -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-indigo border border-transparent hover:border-outline-variant/15 transition-all">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-blue-50 rounded-lg">
+<span class="material-symbols-outlined text-primary" data-icon="payments">payments</span>
+</div>
+<span class="text-tertiary text-xs font-bold bg-tertiary/10 px-2 py-1 rounded">+8.2%</span>
+</div>
+<h3 class="text-on-surface-variant text-sm font-medium tracking-tight">Gross Revenue</h3>
+<p class="text-3xl font-extrabold text-on-surface mt-1">Rp 482,5M</p>
+<p class="text-xs text-slate-400 mt-2">Target tercapai 92%</p>
+</div>
+<!-- Best Seller Card (Asymmetric Layout) -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-indigo border border-transparent hover:border-outline-variant/15 transition-all md:row-span-2">
+<div class="flex items-center gap-2 mb-6">
+<div class="p-2 bg-tertiary/10 rounded-lg">
+<span class="material-symbols-outlined text-tertiary" data-icon="trending_up">trending_up</span>
+</div>
+<h3 class="font-bold text-on-surface tracking-tight">Best Selling Products</h3>
+</div>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="close-up of premium brown coffee beans in a hessian sack with natural sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCC9ZPZ1sTuTU4B4EurNNH1ZwevTO7SdTSXBQ8WyNUW9njdGg8grU1qEED7P-NVQPqXSexZa7pYQSv9NLpLBgtChHwBnL6Vf4p-AKb7L4OkYM1oMfJHl_J6jCGzzJoH6E3a3_T48tL6fRqfEy02x-tx8VPI0iIqv_2ddLI68uYRFODWR_Uu1yvWZDMBHxDzHN7jWLMMuwUsX9Lyvo9vJKRCiJ75zRy4P-T6hu-UngzdBvpYLoKmmEKjXQpOQYDx475wmz8SiuluEzzz"/>
+</div>
+<div class="flex-grow">
+<p class="text-sm font-bold text-on-surface line-clamp-1">Kopi Arabika Java 1kg</p>
+<p class="text-xs text-on-surface-variant">420 Sold</p>
+</div>
+<div class="text-right">
+<p class="text-xs font-bold text-primary">Rp 12,6jt</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="stack of high-quality premium white cotton fabrics with soft shadows and professional studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2-qHDaF0WRgEkb6I-mhK3Cb6yak0a19b6urjve9kh2j1tQMJawcajZspkTVN6YyaVa6qfffZBgmprdaprAEbPxiJkDKTFvlJrELCVl7u3grvkQEHQfbfiRStvhkehYd7Z175pcAy6CwLUF63ChWK-CeNBj5DMGVmRjzGUcyVMdEZirbOYwyPOQlhHCpNg4wqgzePCGYl1Vu7vO9s13Wi7Wh19a_inlFDV0Vp_HfcXsKLbwbMmCPfArJ-perGZ5xovJy1neBokeIIC"/>
+</div>
+<div class="flex-grow">
+<p class="text-sm font-bold text-on-surface line-clamp-1">Kain Katun Premium</p>
+<p class="text-xs text-on-surface-variant">385 Sold</p>
+</div>
+<div class="text-right">
+<p class="text-xs font-bold text-primary">Rp 9,8jt</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="collection of industrial cleaning supplies and detergents in professional packaging against a bright background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfonFEG44QGEimTKNr0rdF5xUrn2r9Ee1lvsXO3H6r7y-dc21YoX7XjUaEqbse0VWlsKbJMcHkXL8QKyqOtBbIB29Sgan8zRmgDvKunqFFxhs2iW9oL2kx3Fde-HyxeubMGDmogJRsAA0jbXd339FqKA2UK59OuL7xALMfFmC9uD3_iws7XP_KBtvjCJmfeGUrGQYaJ2B1NROaLQ2S10ER1mPstm6zr6UK6UKtfR_qWtQimG8yJzfxjdvrKzYszcE8hdCdd8ERmkHi"/>
+</div>
+<div class="flex-grow">
+<p class="text-sm font-bold text-on-surface line-clamp-1">Deterjen Industri 20L</p>
+<p class="text-xs text-on-surface-variant">210 Sold</p>
+</div>
+<div class="text-right">
+<p class="text-xs font-bold text-primary">Rp 8,4jt</p>
+</div>
+</div>
+</div>
+<button class="w-full mt-8 py-3 text-sm font-bold text-primary hover:bg-primary/5 rounded-lg transition-colors border border-primary/20">
+                        View Full Inventory
+                    </button>
+</div>
+<!-- Secondary Small Stats -->
+<div class="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="bg-surface-container-high/40 p-6 rounded-xl border border-outline-variant/15 flex items-center gap-4">
+<div class="w-2 h-12 bg-secondary rounded-full"></div>
+<div>
+<p class="text-xs font-bold text-on-surface-variant uppercase tracking-wider">Average Order Value</p>
+<p class="text-xl font-bold text-on-surface mt-1">Rp 3,75Jt</p>
+</div>
+</div>
+<div class="bg-surface-container-high/40 p-6 rounded-xl border border-outline-variant/15 flex items-center gap-4">
+<div class="w-2 h-12 bg-tertiary rounded-full"></div>
+<div>
+<p class="text-xs font-bold text-on-surface-variant uppercase tracking-wider">Active Distributors</p>
+<p class="text-xl font-bold text-on-surface mt-1">42 Teams</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Data Table Section -->
+<div class="bg-surface-container-lowest rounded-2xl shadow-indigo overflow-hidden border border-transparent">
+<div class="p-6 border-b border-surface-container flex justify-between items-center bg-white">
+<h2 class="text-lg font-bold text-on-surface">Recent Completed Sales</h2>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant !text-lg" data-icon="search">search</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container-low border-none rounded-lg text-sm focus:ring-2 focus:ring-primary/20 w-64" placeholder="Search orders..." type="text"/>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low">
+<th class="px-6 py-4 text-xs font-bold text-on-surface-variant uppercase tracking-wider">Order ID</th>
+<th class="px-6 py-4 text-xs font-bold text-on-surface-variant uppercase tracking-wider">Customer / Store</th>
+<th class="px-6 py-4 text-xs font-bold text-on-surface-variant uppercase tracking-wider">Date</th>
+<th class="px-6 py-4 text-xs font-bold text-on-surface-variant uppercase tracking-wider">Total Amount</th>
+<th class="px-6 py-4 text-xs font-bold text-on-surface-variant uppercase tracking-wider">Status</th>
+<th class="px-6 py-4 text-xs font-bold text-on-surface-variant uppercase tracking-wider">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="px-6 py-4 text-sm font-mono font-bold text-primary">#ORD-90211</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 bg-blue-100 rounded text-primary flex items-center justify-center font-bold text-xs">SM</div>
+<div>
+<p class="text-sm font-bold text-on-surface">Sinar Makmur Abadi</p>
+<p class="text-xs text-on-surface-variant">Surabaya, ID</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-on-surface-variant">Oct 24, 2023</td>
+<td class="px-6 py-4 text-sm font-bold text-on-surface">Rp 15.420.000</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center gap-1.5 py-1 px-2.5 rounded-full text-xs font-bold bg-tertiary/10 text-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                                        Completed
+                                    </span>
+</td>
+<td class="px-6 py-4">
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined !text-lg" data-icon="visibility">visibility</span>
+</button>
+</td>
+</tr>
+<tr class="bg-surface-container-low/20 hover:bg-surface-container-low/50 transition-colors">
+<td class="px-6 py-4 text-sm font-mono font-bold text-primary">#ORD-90184</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 bg-indigo-100 rounded text-secondary flex items-center justify-center font-bold text-xs">TJ</div>
+<div>
+<p class="text-sm font-bold text-on-surface">Toko Jaya Sentosa</p>
+<p class="text-xs text-on-surface-variant">Jakarta Barat, ID</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-on-surface-variant">Oct 23, 2023</td>
+<td class="px-6 py-4 text-sm font-bold text-on-surface">Rp 8.750.000</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center gap-1.5 py-1 px-2.5 rounded-full text-xs font-bold bg-tertiary/10 text-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                                        Completed
+                                    </span>
+</td>
+<td class="px-6 py-4">
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined !text-lg" data-icon="visibility">visibility</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="px-6 py-4 text-sm font-mono font-bold text-primary">#ORD-89952</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 bg-slate-100 rounded text-slate-600 flex items-center justify-center font-bold text-xs">GR</div>
+<div>
+<p class="text-sm font-bold text-on-surface">Grosir Rapi Jaya</p>
+<p class="text-xs text-on-surface-variant">Bandung, ID</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-on-surface-variant">Oct 22, 2023</td>
+<td class="px-6 py-4 text-sm font-bold text-on-surface">Rp 24.100.000</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center gap-1.5 py-1 px-2.5 rounded-full text-xs font-bold bg-tertiary/10 text-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                                        Completed
+                                    </span>
+</td>
+<td class="px-6 py-4">
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined !text-lg" data-icon="visibility">visibility</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-4 bg-white border-t border-surface-container flex items-center justify-between">
+<p class="text-xs text-on-surface-variant font-medium">Showing 1 to 3 of 84 entries</p>
+<div class="flex items-center gap-2">
+<button class="p-1.5 rounded bg-surface-container hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined !text-sm" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="px-3 py-1 rounded bg-primary text-white text-xs font-bold">1</button>
+<button class="px-3 py-1 rounded hover:bg-surface-container text-on-surface text-xs font-medium">2</button>
+<button class="px-3 py-1 rounded hover:bg-surface-container text-on-surface text-xs font-medium">3</button>
+<button class="p-1.5 rounded bg-surface-container hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined !text-sm" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Contextual FAB (Hidden on Reports as per suppression logic but can be used for 'Quick Order') -->
+<!-- Suppressed on Reports page as per instructions for Task-Focused screens -->
+</body></html>

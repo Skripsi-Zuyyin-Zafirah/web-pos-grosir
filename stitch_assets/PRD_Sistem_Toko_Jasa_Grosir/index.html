@@ -1,0 +1,32 @@
+# Dokumen Desain: Sistem Manajemen Toko Jasa Grosir Aceh Timur
+
+## Deskripsi Proyek
+Sistem manajemen toko grosir yang mengoptimalkan antrian menggunakan algoritma Priority Queue (Min-Heap) dengan strategi Shortest Job First (SJF). Sistem ini melayani tiga level pengguna: Pembeli, Kasir, dan Admin.
+
+## Arsitektur Informasi & Fitur Utama
+
+### 1. Modul Akses & Identitas
+*   **Login & Registrasi:** Validasi 3 level akses (Pembeli, Kasir, Admin). Registrasi mandiri untuk Pembeli.
+
+### 2. Modul Pembeli (Customer Experience)
+*   **Katalog & Stok Real-Time:** Daftar produk (Jajanan, Kebutuhan Dapur, Rokok) dengan status stok otomatis.
+*   **Pemesanan Digital:** Input jumlah beli dengan kalkulasi estimasi total harga otomatis.
+
+### 3. Modul Kasir (Operasional & Antrian)
+*   **Dasbor Antrian Priority Queue:** Visualisasi antrian berdasarkan Estimasi Waktu Proses (EWP). Menggunakan struktur Min-Heap.
+*   **Distribusi Tugas:** Notifikasi otomatis tugas ke 4 pegawai berdasarkan status idle.
+*   **Cetak Struk:** Pratinjau dan pencetakan struk belanja.
+
+### 4. Modul Admin (Manajemen & Laporan)
+*   **Manajemen Produk & Stok:** CRUD produk dan kategori.
+*   **Laporan Penjualan:** Filter waktu, ringkasan pendapatan, dan produk terlaris.
+*   **Kelola Pengguna:** Manajemen akun kasir dan pembeli.
+
+### 5. Modul Teknis & Edukasi
+*   **Simulasi Algoritma:** Visualisasi proses Heapify dan log perpindahan antrian.
+*   **Halaman Tentang:** Profil toko dan edukasi algoritma SJF.
+
+## Prinsip Desain
+*   **Framework:** Google Material Design 3.
+*   **Visual:** Bersih, profesional, dengan penekanan pada visualisasi data (terutama pada bagian antrian).
+*   **Responsivitas:** Dioptimalkan untuk tampilan Web Desktop.

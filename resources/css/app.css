@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap');
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-headline: "Manrope", sans-serif;
+
+    --color-primary: #005bbf;
+    --color-primary-container: #1a73e8;
+    --color-secondary: #4355b9;
+    --color-secondary-container: #8596ff;
+    --color-tertiary: #006e1c;
+    --color-tertiary-container: #298832;
+    --color-error: #ba1a1a;
+    
+    --color-background: #f7f9ff;
+    --color-surface: #f7f9ff;
+    --color-surface-container-low: #f1f4fa;
+    --color-surface-container-high: #e5e8ee;
+    --color-surface-container-highest: #dfe3e8;
+    --color-surface-container-lowest: #ffffff;
+    
+    --color-on-surface: #181c20;
+    --color-on-surface-variant: #414754;
+    --color-outline-variant: #c1c6d6;
+}
+
+@utility bg-primary-gradient {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-container) 100%);
+}
+
+@utility shadow-indigo {
+    box-shadow: 0 10px 25px -5px rgba(0, 91, 191, 0.1), 0 8px 10px -6px rgba(0, 91, 191, 0.1);
+}
+
+@layer base {
+    h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-headline);
+    }
+}
+
